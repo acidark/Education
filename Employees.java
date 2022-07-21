@@ -23,6 +23,23 @@ public class Employees {
         }
     }
     public void print(Education edu){
-        this.Employees.stream().filter(s->s.getEducation()==edu).forEach(s->{System.out.println(s);});
+        Iterator<Person> persons = this.Employees.iterator();
+        while(persons.hasNext()){
+            Person persona = persons.next();
+            if(persona.getEducation()==edu){
+                //System.out.println(thi);
+                System.out.println(persona);
+            }
+        }
+        //this.Employees.stream().filter(s->s.getEducation()==edu).forEach(s->{System.out.println(s);});
+    }
+
+    public void fire(Education edu){
+        Iterator<Person> persons = this.Employees.iterator();
+        while(persons.hasNext()){
+            if(persons.next().getEducation()== edu){
+                persons.remove();
+            }
+        }
     }
 }

@@ -16,7 +16,9 @@ public class MainProgram {
         //trabajan.add(new Person("ury", Education.PHD));
         //trabajan.add(new Person("sara", Education.BA));
 
-        trabajan.print();
+        //trabajan.print();
+        //trabajan.fire(Education.PHD);
+        trabajan.print(Education.PHD);
         //System.out.println(empleados);
     
     }
